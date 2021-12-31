@@ -6,48 +6,6 @@ var router = express.Router();
  var conn = require("../config/db");
  var userModel = require('../models/user');
 
-// /* GET home page. */
-// router.get('/', async function(req, res, next) {
-//   let options = {
-//     serverSuccess: req.flash('server-success')
-//   }
-//   try {
-//     options.userList = await userModel.list(conn);
-//   } catch (error) {
-//     options.serverError = error.message
-//   }
-//   res.render("index",options);
-// });
-
-// router.get('/create', function(req, res, next) {
-//   res.render('create',{
-//     serverError: req.flash('server-error')
-//   });
-// });
-
-// router.post('/create', async function(req, res, next) {
- 
-//   let data = {
-//     first_name: req.body.first_name,
-//     last_name: req.body.last_name,
-//     mobile: req.body.mobile,
-//     email: req.body.email
-//   };
-//     try {
-//       let resp = await userModel.insert(conn,data);
-//       req.flash('server-success', "user added sucessfully")
-//       res.redirect("/");
-//     } catch (error) {
-//       req.flash('server-error', error.message)
-//        res.redirect("/create")
-//     }
-  
-
-// });
-
-// module.exports = router;
-//-------------------------------
-
 /* GET home page. */
 router.get("/", async function(req, res, next) {
   let options = {
